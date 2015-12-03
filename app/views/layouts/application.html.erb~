@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DemoApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <title>Ruby on Rails Tutorail Sample App | <%= @title %></title>
+  <%= stylesheet_link_tag   'blueprint/screen', :media => 'screen' %>
+  <%= stylesheet_link_tag   'blueprint/print', :media => 'print' %>
+  <%= stylesheet_link_tag   'custom', :media => 'screen' %>
+  <%= csrf_meta_tag %>
+  
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+     
+     <section class="round">
+        <%= yield %>
+     </section>
+     
+  </div>
 </body>
 </html>
